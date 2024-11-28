@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ContainerB, ContentB, TitleB, ButtonB, ImageB, SubtitleB, SectionB, ContainerPRIN, FadeContainer, SlideInContainer, TitleIntro, MainBlock, BlockItem, TextContainer, ImageContainer, BlockReplicas, ImageBAlt } from "../../Styles/Main";
+import { topicos } from '../../data.js';
 import Livros from '../../img/livros.png';
 import LegisImage from '../../img/livros.png';
 
@@ -34,20 +36,23 @@ const Main = () => {
               </TextContainer>
             </MainBlock>
 
-            {/* Blocos menores */}
             <BlockReplicas>
-              {[...Array(9)].map((_, index) => (
-                <BlockItem key={index}>
-                  <ImageContainer>
-                    <ImageBAlt src={LegisImage} alt={`Imagem do tópico ${index + 1}`} />
-                  </ImageContainer>
-                  <TextContainer>
-                    <h4>Tópico {index + 2}</h4>
-                    <p>Descrição do tópico {index + 2}...</p>
-                  </TextContainer>
-                </BlockItem>
+              {topicos.map((topico) => (
+                <Link 
+                  to={`/topico/${topico.id}`} key={topico.id} style={{ textDecoration: "none", color: "inherit" }}>
+                  <BlockItem>
+                    <ImageContainer>
+                      <ImageBAlt src={topico.imagem} alt={`Imagem do tópico ${topico.id}`} />
+                    </ImageContainer>
+                    <TextContainer>
+                      <h4>{topico.titulo}</h4>
+                      <p>{topico.descricao}</p>
+                    </TextContainer>
+                  </BlockItem>
+                </Link>
               ))}
             </BlockReplicas>
+
           </SectionB>
         </ContainerPRIN>
       </SlideInContainer>

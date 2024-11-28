@@ -30,6 +30,7 @@ export const FadeContainer = styled.div`
 
 export const ContainerPRIN = styled.div`
   background-color: #4d4d4d;
+  margin-top: 50px;
 `;
 
 export const ContainerB = styled.div`
@@ -180,6 +181,7 @@ export const TextContainer = styled.div`
     color: #666;
   }
 `;
+
 
 
 
