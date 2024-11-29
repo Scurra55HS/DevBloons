@@ -1,90 +1,130 @@
 import styled from 'styled-components';
 
-export const TopicoPage = styled.div`
-  padding: 40px;
-  max-width: 1200px;
-  margin: 80px auto 40px;
-`;
-
-export const Title = styled.h1`
-  font-size: 3rem;
+export const PageWrapper = styled.div`
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
   color: #333;
-  font-weight: bold;
-  margin-bottom: 20px;
 `;
 
-export const ContentBlock = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+export const Banner = styled.div`
+  text-align: center;
+  background: linear-gradient(120deg, #ff7e5f, #feb47b);
+  color: white;
+  padding: 50px 20px;
+  border-radius: 10px;
   margin-bottom: 40px;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
-
-export const ImgTopic = styled.img`
-  max-width: 40%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-left: 20px;
-
-  /* Ajusta o tamanho da imagem para telas menores */
-  @media (max-width: 768px) {
-    max-width: 100%;  /* A imagem ocupa toda a largura em telas pequenas */
-    margin-left: 0;
-  }
-`;
-
-export const InfoBlock = styled.div`
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
-
-  div {
-    flex: 1;
-    margin-right: 20px;
-  }
-
-  h4 {
-    font-size: 1.5rem;
+  h1 {
+    font-size: 3rem;
     margin-bottom: 10px;
-    color: #333;
   }
 
   p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+`;
+
+export const VisualSection = styled.div`
+  text-align: center;
+  margin-bottom: 40px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    margin-top: 10px;
     font-size: 1rem;
     color: #666;
   }
 `;
 
-export const Divider = styled.div`
-  width: 2px;
-  height: 100%;
-  background-color: #ddd;
-  margin: 0 20px;
+export const ContentSection = styled.div`
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 2rem;
+    color: #ff7e5f;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
 `;
 
-export const ButtonTopic = styled.button`
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #4d4d4d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 30px;
-  transition: background-color 0.3s ease;
+export const FactsList = styled.div`
+  margin: 40px 0;
 
-  &:hover {
-    background-color: #333;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #feb47b;
+  }
+`;
+
+export const FactCard = styled.div`
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+
+  h4 {
+    color: #ff7e5f;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: #666;
+  }
+`;
+
+export const ExploreBlock = styled.div`
+  background: #fdf2e9;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 40px 0;
+  text-align: center;
+
+  h2 {
+    color: #ff7e5f;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+`;
+
+export const FooterActions = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #ff7e5f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #feb47b;
+    }
   }
 `;
