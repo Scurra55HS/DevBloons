@@ -1,4 +1,3 @@
-// models/User.js
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/connDb.js';
 
@@ -8,7 +7,7 @@ const User = sequelize.define('User', {
     primaryKey: true,
     autoIncrement: true,
   },
-  nome: {
+  name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -17,11 +16,11 @@ const User = sequelize.define('User', {
     allowNull: false,
     unique: true,
   },
-  senha: {
+  password: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  tipo: {
+  role: {
     type: DataTypes.STRING,
     allowNull: false,
     defaultValue: 'colaborador',
